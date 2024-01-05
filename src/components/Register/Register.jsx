@@ -4,7 +4,7 @@ import styles from "../../styles/style"
 import { Link } from "react-router-dom";
 import { RxAvatar } from "react-icons/rx";
 
-const Login = () => {
+const Register = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,16 +12,13 @@ const Login = () => {
   const [visible, setVisible] = useState(false);
   const [avatar, setAvatar] = useState(null);
 
+  const handleSubmit = () => {
+    console.log("ffff");
+  };
+
   const handleFileInputChange = (e) => {
-    const reader = new FileReader();
-
-    reader.onload = () => {
-      if (reader.readyState === 2) {
-        setAvatar(reader.result);
-      }
-    };
-
-    reader.readAsDataURL(e.target.files[0]);
+    const file = e.target.files[0];
+    setAvatar(file);
   };
 
   return (
@@ -113,7 +110,7 @@ const Login = () => {
                 <span className="inline-block h-8 w-8 rounded-full overflow-hidden">
                   {avatar ? (
                     <img
-                      src={avatar}
+                      src={URL.createObjectURL(avatar)}
                       alt="avatar"
                       className="h-full w-full object-cover rounded-full"
                     />
@@ -159,4 +156,4 @@ const Login = () => {
 };
 
 
-export default Login;
+export default Register;
