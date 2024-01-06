@@ -9,6 +9,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
 
+  //return View
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -105,7 +107,7 @@ const Login = () => {
             <div className={`${styles.noramlFlex} w-full`}>
               <h4>Do not have any account?</h4>
               <Link to="/register" className="text-blue-600 pl-2">
-                Sign Up
+                Register
               </Link>
             </div>
           </form>
