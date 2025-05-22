@@ -1,2 +1,2 @@
-Eshop Template
+Eshop
 
