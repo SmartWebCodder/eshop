@@ -1,2 +1,2 @@
-eshop Project
+e-shop Project
 
