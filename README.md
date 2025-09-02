@@ -1,2 +1,2 @@
-e-shop Web Project Web Application
+e-shop Web Project Web App
 
